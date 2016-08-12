@@ -5,6 +5,7 @@
 	versionCode = "10"
     version     = "0.0.1" >
 
+	<preference name="phonegap-version" value="cli-6.3.0" />
 <!-- versionCode is optional and Android only -->
 
   	<name>RCW</name>
@@ -13,6 +14,16 @@
       RCW Codes for the State of Washington
   </description>
 
+  
+  <platform name="android">
+		<icon src="images/Icon.png" gap:platform="android" gap:qualifier="ldpi" />
+		<icon src="images/Icon.png" gap:platform="android" gap:qualifier="mdpi" />
+		<icon src="images/Icon.png" gap:platform="android" gap:qualifier="hdpi" />
+		<icon src="images/Icon.png" gap:platform="android" gap:qualifier="xhdpi" />
+		<icon src="images/Icon.png" gap:platform="android" gap:qualifier="xxhdpi" />
+		<icon src="images/Icon.png" gap:platform="android" gap:qualifier="fr-xxhdpi" />	
+	</platform>
+  
   <author email="parkoo.staff@gmail.com">
       Noah Hebert
   </author>
