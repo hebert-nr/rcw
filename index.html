@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RCW</title>
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="lib/angular/angular.min.js"></script>
+<script src="js/ui-bootstrap-tpls-2.0.1.min.js"></script>
+
+
+</head>
+<body>
+
+<div class="heading">
+	<div>
+		<div class="header" >
+			<div>
+			<a  ng-href="#"><img  class="img-responsive" src="images/home.png" style="z-index: 100; cursor:pointer; position:absolute; width:70px;height:70px; right:0; margin:2% 3% 0 0; "></a>
+			<img src="images/seal.png" alt="Seal of the State of Washington." style="float:left; margin:2% 0 4% 0%;" class="img-responsive">
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>
+    </div>
+	<hr />
+  </div>
+</div>
+
+<!--this div takes information from our controller 'MyController' created in controllers.js which houses our model "author"
+anything we placed in the scope variable within 'MyController' will be available here.-->
+<div id="chooseTitle" class="col-lg-6 text-center" ng-controller="MyController">
+	<ul class="list list-unstyled">
+		<li ng-repeat="items in rcw.title">
+			<a class=""><h3>Title {{items.titleNumber}}: {{items.titleDescription}}</h3></a>
+			<hr \>
+		</li>
+	</ul>
+</div>
+<!-- <div id="chooseChapter" ng-controller="MyController">
+	<ul class="list-unstyled">
+		<li ng-repeat="things in rcw.chapter">
+			<h3>Chapter {{things.chapterNumber}}: {{things.chapterDescription}}</h3>
+		</li>
+	</ul>
+</div> -->
+
+<div class="">
+
+</div>
+<script src="js/controllers.js"></script>
+</body>
+</html>
