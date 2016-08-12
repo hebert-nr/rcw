@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+
+	xmlns:gap   = "http://phonegap.com/ns/1.0"
+	id          = "com.phonegap.rcw"
+	version     = "0.11.2"
+	versionCode = "10" >
+
+	<preference name="phonegap-version" value="cli-6.3.0" />
+	<preference name="Orientation" value="portrait" />
+   
+	<name>RCW</name>
+	<content src="index.html"/>
+	
+	<platform name="android">
+		<icon src="images/Icon.png" gap:platform="android" gap:qualifier="ldpi" />
+		<icon src="images/Icon.png" gap:platform="android" gap:qualifier="mdpi" />
+		<icon src="images/Icon.png" gap:platform="android" gap:qualifier="hdpi" />
+		<icon src="images/Icon.png" gap:platform="android" gap:qualifier="xhdpi" />
+		<icon src="images/Icon.png" gap:platform="android" gap:qualifier="xxhdpi" />
+		<icon src="images/Icon.png" gap:platform="android" gap:qualifier="fr-xxhdpi" />	
+	</platform>
+	<platform name="ios">
+	</platform>
+	
+	<description>
+		<h3 style="color:#005406;">!!!BETA VERSION!!!</h3>
+			<h3><strong>Still in test mode </strong></h3>
+			<ul>
+				<li>Minimal data</li>
+	</description>
+
+	<author email="parkoo.stargg@gmail.com">
+		Noah Hebert
+	</author>
+
+</widget>
