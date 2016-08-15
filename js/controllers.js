@@ -4,20 +4,17 @@ var myApp will contain all our code for the application. aka NameSpacing. and th
  Inside the [] are directives.
  $scope is like a super-variable we can pass things from our JS to our app and template, and vice-versa
 */
-var myApp = angular.module('myApp',['ui.bootstrap']);
+var rcwControllers = angular.module('rcwControllers',['ui.bootstrap']);
 
 /* We pass the scope and http in an array to keep from getting messed up by minification of css/js*/
-myApp.controller('MyController', ['$scope', '$http', function ($scope, $http) {
-	
-	
-/*We can also pass in external files rather than hard coding using the HTTP service. It pulls the data.js file containing all our JSON rather than having these 
-hundreds of lines being hardcoded here in our controller.*/	
-$http.get('js/data.json').success(function(data){
-$scope.rcw = data;	
-})
 
-	
-myApp.controller('NavController', function(){
+rcwControllers.controller('SearchController', ['$scope', '$http', function ($scope, $http) {
+	/*We can pass in external files rather than hard coding using the HTTP service. It pulls the data.js file containing all our JSON rather than having these hundreds of lines being hardcoded here in our controller.*/	
+	$http.get('js/data.json').success(function(data){
+	$scope.rcw = data;	
+	})
+
+	myApp.controller('NavController', function(){
 		this.tab = 1;
 		
 		this.selectTab = function(setTab){
@@ -28,9 +25,14 @@ myApp.controller('NavController', function(){
 			return this.tab === checkTab;
 		};
 	});
-
-	
 }]);
+
+
+
+
+
+
+
 
 
 /*Helps filter to a 1 unique item we're searching for, sort of like DISTINCT in SQL*/

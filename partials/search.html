@@ -1,0 +1,20 @@
+<section class="searchPage">
+<div class="col-lg-6">
+	<div class="search">
+		<input ng-model="query" class="form-control" placeholder="Search for...">
+	</div>
+	<hr />
+</div>
+
+
+<!--this div takes information from our controller 'MyController' created in controllers.js which houses our model "author"
+anything we placed in the scope variable within 'MyController' will be available here.-->
+<div id="chooseTitle" class="col-lg-6 text-center">
+	<ul class="list list-unstyled">
+		<li ng-repeat="items in rcw.title | filter : query">
+			<a style="cursor:pointer;" class=""><h3><strong>Title {{items.titleNumber}}: </strong>{{items.titleDescription}}</h3></a>
+			<hr \>
+		</li>
+	</ul>
+</div>
+</section>
