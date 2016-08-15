@@ -3,7 +3,7 @@
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "com.hebert.rcw"
 	version     = "0.0.1" 
-	versionCode = "1">
+	versionCode = "0">
     
 
 <preference name="phonegap-version" value="cli-6.3.0" />
