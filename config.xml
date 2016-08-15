@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-    <widget xmlns   = "http://www.w3.org/ns/widgets"
-    xmlns:gap   = "http://phonegap.com/ns/1.0"
-    id          = "com.hebert.rcw"
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+	xmlns:gap   = "http://phonegap.com/ns/1.0"
+	id          = "com.phonegap.rcwCode"
 	version     = "0.0.1" 
 	versionCode = "0">
-    
 
-<preference name="phonegap-version" value="cli-6.3.0" />
+
+	<preference name="phonegap-version" value="cli-6.3.0" />
 	<preference name="Orientation" value="portrait" />
 <!-- versionCode is optional and Android only -->
 
   	<name>RCW</name>
 
   <description>
-      RCW Codes for the State of Washington
+      RCW: Codes for the State of Washington
   </description>
 
   
