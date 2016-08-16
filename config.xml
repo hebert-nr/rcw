@@ -25,6 +25,8 @@
 		<icon src="images/Icon.jpg" gap:platform="android" gap:qualifier="xxhdpi" />
 		<icon src="images/Icon.jpg" gap:platform="android" gap:qualifier="fr-xxhdpi" />	
 	</platform>
+	<platform name="ios">
+	</platform>
   
   <author email="parkoo.staff@gmail.com">
       Noah Hebert
