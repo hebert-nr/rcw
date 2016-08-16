@@ -12,7 +12,7 @@ rcwControllers.controller('SearchController', ['$scope', '$http', function ($sco
 	/*We can pass in external files rather than hard coding using the HTTP service. It pulls the data.js file containing all our JSON rather than having these hundreds of lines being hardcoded here in our controller.*/	
 	$http.get('js/data.json').success(function(data){
 	$scope.rcw = data;	
-	})
+	});
 
 	myApp.controller('NavController', function(){
 		this.tab = 1;
@@ -27,7 +27,12 @@ rcwControllers.controller('SearchController', ['$scope', '$http', function ($sco
 	});
 }]);
 
-
+rcwControllers.controller('TitleDetailController', ['$scope', '$http','$routeParams', function($scope, $http, $routeParams) {
+  $http.get('js/data.json').success(function(data) {
+    $scope.rcw = data;
+    $scope.whichTitle = $routeParams.itemId;
+  });
+}]);
 
 
 

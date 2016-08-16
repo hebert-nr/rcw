@@ -11,9 +11,10 @@
 anything we placed in the scope variable within 'MyController' will be available here.-->
 <div id="chooseTitle" class="col-lg-6 text-center">
 	<ul class="list list-unstyled">
-		<li ng-repeat="items in rcw.title | filter : query">
-			<a style="cursor:pointer;" class=""><h3><strong>Title {{items.titleNumber}}: </strong>{{items.titleDescription}}</h3></a>
-			<hr \>
+		<li ng-repeat="items in rcw | filter : query">
+			<a href="#/titleDetail/{{rcw.indexOf(items)}}" style="cursor:pointer;">
+			<h3><strong>Title {{items.titleNumber}}: </strong>{{items.titleDescription}}</h3></a>
+			<hr \>     
 		</li>
 	</ul>
 </div>

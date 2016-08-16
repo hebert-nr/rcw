@@ -15,10 +15,13 @@ myApp.config(['$routeProvider', function($routeProvider){
 	{
 		templateUrl:'partials/search.html',//use the partial file under this name
 		controller: 'SearchController'//from this controller	
-	}).otherwise({
+	}).
+	when('/titleDetail/:itemId', {
+    templateUrl: 'partials/titleDetail.html',
+    controller: 'TitleDetailController'
+  })
+	.otherwise({
 		redirectTo:'/search'
 	});
-	
-	
-	
+		
 }]);
