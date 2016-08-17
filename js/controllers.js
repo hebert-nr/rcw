@@ -30,14 +30,18 @@ rcwControllers.controller('SearchController', ['$scope', '$http', function ($sco
 rcwControllers.controller('TitleDetailController', ['$scope', '$http','$routeParams', function($scope, $http, $routeParams) {
   $http.get('js/data.json').success(function(data) {
     $scope.rcw = data;
-    $scope.whichTitle = $routeParams.itemId;
+	$scope.whichTitle = $routeParams.itemId;
+
   });
 }]);
 
-
-
-
-
+rcwControllers.controller('ChapterDetailController', ['$scope', '$http','$routeParams', function($scope, $http, $routeParams) {
+  $http.get('js/data.json').success(function(data) {
+	$scope.rcw = data;
+	$scope.chapters = data.chapter;
+	$schope.whichChapter = $routeParams.itemId;
+  });
+}]);
 
 
 /*Helps filter to a 1 unique item we're searching for, sort of like DISTINCT in SQL*/

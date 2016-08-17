@@ -17,8 +17,12 @@ myApp.config(['$routeProvider', function($routeProvider){
 		controller: 'SearchController'//from this controller	
 	}).
 	when('/titleDetail/:itemId', {
-    templateUrl: 'partials/titleDetail.html',
-    controller: 'TitleDetailController'
+		templateUrl: 'partials/titleDetail.html',
+		controller: 'TitleDetailController'
+  }).
+	when('/chapterDetail/:itemId', {
+		templateUrl: 'partials/chapterDetail.html',
+		controller: 'ChapterDetailController'
   })
 	.otherwise({
 		redirectTo:'/search'

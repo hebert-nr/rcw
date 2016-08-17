@@ -1,0 +1,25 @@
+<section class="chapterDetail">
+<div ng-model="rcw" style="text-align:center; margin:2% 12% 4% 12%;">
+	<h3>Title {{rcw.titleNumber}}: {{rcw.titleDescription}}</h3>
+		<h4>Chapter {{chapters.titleNumber}}: {{chapters.titleDescription}}</h4>
+	<hr/>
+	<div>
+		<ul class="list-group" style="list-style:none;">
+			<li ng-repeat="items in chapters[whichChapter].chapter">
+			<a href="#/chapterDetail/{{chapters.indexOf(items)}}" style="cursor:pointer;">
+			<h4>Chapter {{items.chapterNumber}}: {{items.chapterDescription}}</h4>
+			<hr/>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div>
+	<h4>Notes:</h4>
+	
+		<p style="text-align:left;">{{chapters[whichChapter].titleNotes}}</p>
+	</div>
+	<a href="javascript:history.back()"><button class="btn btn-default">Back to Search</button></a>
+</div>
+
+</div>
+</section>

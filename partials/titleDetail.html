@@ -6,7 +6,7 @@
 	<div>
 		<ul class="list-group" style="list-style:none;">
 			<li ng-repeat="items in rcw[whichTitle].chapter">
-			<a href="#" style="cursor:pointer;">
+			<a href="#/chapterDetail/{{rcw.indexOf(items)}}" style="cursor:pointer;">
 			<h4>Chapter {{items.chapterNumber}}: {{items.chapterDescription}}</h4>
 			<hr/>
 			</a>
